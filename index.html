@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Библиотека Алвара Аалто</title>
+    <!-- Подключение Font Awesome для иконок -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Шапка с навигацией (фиксированная) -->
+    <header class="navbar">
+      <div class="container header-container">
+        <!-- Логотип -->
+        <div class="logo">
+          <div class="logo-icon"></div>
+          <!-- Заглушка для пиксельного лого -->
+          <div class="logo-text">
+            <span>БИБЛИОТЕКА</span>
+            <span>АЛВАРА ААЛТО</span>
+          </div>
+        </div>
+
+        <!-- Строка поиска -->
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Книга или автор" />
+        </div>
+
+        <!-- Переключатель темной/светлой темы -->
+        <div class="theme-toggle">
+          <i class="fas fa-moon"></i>
+        </div>
+
+        <!-- Ссылки авторизации -->
+        <div class="auth-links">
+          <a href="#" class="link-sub">Подписка</a>
+          <a href="#" class="link-login">Войти</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Основной контент страницы -->
+    <main class="main-content-wrapper">
+      <div class="container main-layout">
+        <!-- Левая колонка контента -->
+        <div class="left-column">
+          <div class="breadcrumbs">
+            <a href="#">Главная</a> <i class="fas fa-chevron-right"></i>
+          </div>
+
+          <h1>Библиотека</h1>
+
+          <!-- Популярные категории -->
+          <section class="section-block">
+            <h2>Популярные категории</h2>
+            <div class="category-cards">
+              <div class="category-card">
+                <h3>Фэнтези</h3>
+                <p><i class="fas fa-book-reader"></i> 85 760</p>
+                <img
+                  src="https://via.placeholder.com/70x70/2b2b2b/d1d1d1?text=🪖"
+                  alt="Icon"
+                  class="category-icon"
+                />
+              </div>
+              <div class="category-card">
+                <h3>Фантастика</h3>
+                <p><i class="fas fa-book-reader"></i> 63 241</p>
+                <img
+                  src="https://via.placeholder.com/70x70/2b2b2b/d1d1d1?text=🧙"
+                  alt="Icon"
+                  class="category-icon"
+                />
+              </div>
+              <div class="category-card">
+                <h3>Психология</h3>
+                <p><i class="fas fa-book-reader"></i> 70 532</p>
+                <img
+                  src="https://via.placeholder.com/70x70/2b2b2b/d1d1d1?text=🚶"
+                  alt="Icon"
+                  class="category-icon"
+                />
+              </div>
+              <!-- Добавьте больше категорий по аналогии -->
+            </div>
+          </section>
+
+          <!-- Все книги -->
+          <section class="section-block">
+            <h2>Все книги</h2>
+            <div class="book-cards">
+              <!-- Пример одной книги -->
+              <div class="book-card">
+                <img
+                  src="/книги/Запад.jpg"
+                  alt="Обложка книги"
+                  border-radius:
+                  10px
+                />
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <!-- Пустая звезда -->
+                </div>
+                <h3>Путешествие на Запад...</h3>
+                <p class="author">У Чэнъэнь</p>
+              </div>
+              <div class="book-card">
+                <img
+                  src="/книги/Запад2.jpg"
+                  alt="Обложка книги"
+                  border-radius:
+                  10px
+                />
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h3>Путешествие на Запад...2</h3>
+                <p class="author">У Чэнъэнь</p>
+              </div>
+              <div class="book-card">
+                <img src="/книги/Красное бедствие.jpg" alt="Обложка книги" border-radius: 10px />
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h3>Красное бедствие</h3>
+                <p class="author">Рита Хоффман</p>
+              </div>
+              <div class="book-card">
+                <img
+                  src="/книги/Злодейский.jpg"
+                  alt="Обложка книги"
+                />
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h3>Злодейский путь!.. Том 5</h3>
+                <p class="author">Эл Моргот</p>
+              </div>
+              <div class="book-card">
+                <img
+                  src="https://via.placeholder.com/150x220/333333/ffffff?text=Король+шаманов"
+                  alt="Обложка книги"
+                />
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h3>Король шаманов...</h3>
+                <p class="author">Хироюки Такэи</p>
+              </div>
+              <div class="book-card">
+                <img
+                  src="https://via.placeholder.com/150x220/333333/ffffff?text=Бусидо"
+                  alt="Обложка книги"
+                />
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h3>Бусидо</h3>
+                <p class="author">Ямамото Цунэтомо</p>
+              </div>
+              <!-- Добавьте больше книг по аналогии -->
+            </div>
+          </section>
+        </div>
+
+        
+
+        <!-- Правая колонка - сайдбар категорий -->
+        <div class="right-column sidebar-block">
+          <h2>Категории</h2>
+          <p class="category-count">7 категорий</p>
+          <ul class="category-list">
+            <li><a href="#">Бизнес-книги</a></li>
+            <li><a href="#">История</a></li>
+            <li><a href="#">Приключения</a></li>
+            <li><a href="#">Психология</a></li>
+            <li><a href="#">Ужасы</a></li>
+            <li><a href="#">Фантастика</a></li>
+            <li><a href="#">Фэнтези</a></li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
