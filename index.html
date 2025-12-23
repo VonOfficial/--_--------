@@ -1,327 +1,562 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Букбук</title>
-    <!-- Подключение Font Awesome для иконок -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Шапка с навигацией (фиксированная) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Шапка -->
     <header class="navbar">
-      <div class="container header-container">
-        <!-- Логотип -->
-        <div class="logo">
-          <div class="logo-icon"></div>
-          <!-- Заглушка для пиксельного лого -->
-          <div class="logo-text">
-            <span>Букбук</span>
-            <span></span>
-          </div>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <div>Букбук</div>
+            </div>
+            
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Книга или автор">
+            </div>
+            
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+            
+            <div class="auth-links">
+                <a href="#" class="link-sub">Подписка</a>
+                <a href="#" class="link-login">Войти</a>
+            </div>
         </div>
-
-        <!-- Строка поиска -->
-        <div class="search-box">
-          <i class="fas fa-search"></i>
-          <input type="text" placeholder="Книга или автор" />
-        </div>
-
-        <!-- Переключатель темной/светлой темы -->
-        <div class="theme-toggle">
-          <i class="fas fa-moon"></i>
-        </div>
-
-        <!-- Ссылки авторизации -->
-        <div class="auth-links">
-          <a href="#" class="link-sub">Подписка</a>
-          <a href="#" class="link-login">Войти</a>
-        </div>
-      </div>
     </header>
-
-    <!-- Основной контент страницы -->
-    <main class="main-content-wrapper">
-      <div class="container main-layout">
-        <!-- Левая колонка контента -->
-        <div class="left-column">
-          <div class="breadcrumbs">
-            <a href="#">Главная</a> <i class="fas fa-chevron-right"></i>
-          </div>
-
-          <h1>Библиотека</h1>
-
-          <!-- Популярные категории -->
-          <section class="section-block">
-            <h2>Популярные категории</h2>
-            <div class="category-cards">
-              <div class="category-card">
-                <h3>Фэнтези</h3>
-                <p><i class="fas fa-book-reader"></i> 85 760</p>
-                <img
-                  src="/img/Рыцарь.png"
-                  alt="Icon"
-                  class="category-icon"
-                />
-              </div>
-              <div class="category-card">
-                <h3>Фантастика</h3>
-                <p><i class="fas fa-book-reader"></i> 63 241</p>
-                <img
-                  src="/img/Фантастика.png"
-                  alt="Icon"
-                  class="category-icon"
-                />
-              </div>
-              <div class="category-card">
-                <h3>Психология</h3>
-                <p><i class="fas fa-book-reader"></i> 70 532</p>
-                <img
-                  src="/img/Психология.png"
-                  alt="Icon"
-                  class="category-icon"
-                />
-              </div>
-              <!-- Добавьте больше категорий по аналогии -->
+    
+    <!-- Основной контент -->
+    <main class="container">
+        <div class="main-layout">
+            <!-- Левая колонка -->
+            <div class="left-column">
+                <div class="breadcrumbs">
+                    Главная → Библиотека
+                </div>
+                
+                <h1>Библиотека</h1>
+                
+                <!-- Категории -->
+                <section class="section-block">
+                    <h2>Популярные категории</h2>
+                    <div class="category-cards">
+                        <div class="category-card">
+                            <h3>Фэнтези</h3>
+                            <p>85 760 читателей</p>
+                        </div>
+                        <div class="category-card">
+                            <h3>Фантастика</h3>
+                            <p>63 241 читателей</p>
+                        </div>
+                        <div class="category-card">
+                            <h3>Психология</h3>
+                            <p>70 532 читателей</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Книги с вертикальным скроллом -->
+                <section class="section-block">
+                    <h2>Все книги</h2>
+                    <div class="books-scroll-container">
+                        <div class="book-cards">
+                            <!-- Первый блок книг (12 штук) -->
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <h3>Путешествие на Запад</h3>
+                                <p class="author">У Чэнъэнь</p>
+                            </div>
+                            
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Красное бедствие</h3>
+                                <p class="author">Рита Хоффман</p>
+                            </div>
+                            
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Злодейский путь! Том 5</h3>
+                                <p class="author">Эл Моргот</p>
+                            </div>
+                            
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Король шаманов</h3>
+                                <p class="author">Хироюки Такэи</p>
+                            </div>
+                            
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Бусидо</h3>
+                                <p class="author">Ямамото Цунэтомо</p>
+                            </div>
+                            
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Ведьмак</h3>
+                                <p class="author">Анджей Сапковский</p>
+                            </div>
+                            
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Выживание в игре за варвара</h3>
+                                <p class="author">Манхва</p>
+                            </div>
+                            
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Памятник Берсерку</h3>
+                                <p class="author">Манхва</p>
+                            </div>
+                            
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Поднятие уровня в одиночку</h3>
+                                <p class="author">Na Honjaman Lebel-eob</p>
+                            </div>
+                            
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Магическая битва</h3>
+                                <p class="author">Jujutsu Kaisen</p>
+                            </div>
+                            
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Человек-бензопила 2</h3>
+                                <p class="author">Chainsaw Man 2</p>
+                            </div>
+                            
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Властелин Колец</h3>
+                                <p class="author">Дж. Р. Р. Толкин</p>
+                            </div>
+                            
+                            <!-- Второй блок книг (дубликаты первых 12) -->
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <h3>Путешествие на Запад</h3>
+                                <p class="author">У Чэнъэнь</p>
+                            </div>
+                            
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Красное бедствие</h3>
+                                <p class="author">Рита Хоффман</p>
+                            </div>
+                            
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Злодейский путь! Том 5</h3>
+                                <p class="author">Эл Моргот</p>
+                            </div>
+                            
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Король шаманов</h3>
+                                <p class="author">Хироюки Такэи</p>
+                            </div>
+                            
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Бусидо</h3>
+                                <p class="author">Ямамото Цунэтомо</p>
+                            </div>
+                            
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Ведьмак</h3>
+                                <p class="author">Анджей Сапковский</p>
+                            </div>
+                            
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Выживание в игре за варвара</h3>
+                                <p class="author">Манхва</p>
+                            </div>
+                            
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Памятник Берсерку</h3>
+                                <p class="author">Манхва</p>
+                            </div>
+                            
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Поднятие уровня в одиночку</h3>
+                                <p class="author">Na Honjaman Lebel-eob</p>
+                            </div>
+                            
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Магическая битва</h3>
+                                <p class="author">Jujutsu Kaisen</p>
+                            </div>
+                            
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Человек-бензопила 2</h3>
+                                <p class="author">Chainsaw Man 2</p>
+                            </div>
+                            
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Властелин Колец</h3>
+                                <p class="author">Дж. Р. Р. Толкин</p>
+                            </div>
+                            
+                            <!-- Третий блок книг (еще раз дубликаты) -->
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <h3>Путешествие на Запад</h3>
+                                <p class="author">У Чэнъэнь</p>
+                            </div>
+                            
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Красное бедствие</h3>
+                                <p class="author">Рита Хоффман</p>
+                            </div>
+                            
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Злодейский путь! Том 5</h3>
+                                <p class="author">Эл Моргот</p>
+                            </div>
+                            
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Король шаманов</h3>
+                                <p class="author">Хироюки Такэи</p>
+                            </div>
+                            
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Бусидо</h3>
+                                <p class="author">Ямамото Цунэтомо</p>
+                            </div>
+                            
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Ведьмак</h3>
+                                <p class="author">Анджей Сапковский</p>
+                            </div>
+                            
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Выживание в игре за варвара</h3>
+                                <p class="author">Манхва</p>
+                            </div>
+                            
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Памятник Берсерку</h3>
+                                <p class="author">Манхва</p>
+                            </div>
+                            
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Поднятие уровня в одиночку</h3>
+                                <p class="author">Na Honjaman Lebel-eob</p>
+                            </div>
+                            
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Магическая битва</h3>
+                                <p class="author">Jujutsu Kaisen</p>
+                            </div>
+                            
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Человек-бензопила 2</h3>
+                                <p class="author">Chainsaw Man 2</p>
+                            </div>
+                            
+                            <div class="book-card">
+                                <img>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Властелин Колец</h3>
+                                <p class="author">Дж. Р. Р. Толкин</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
-          </section>
-
-          <!-- Все книги -->
-          <section class="section-block">
-            <h2>Все книги</h2>
-            <div class="book-cards">
-              <!-- Пример одной книги -->
-              <div class="book-card">
-                <img
-                  src="/книги/Запад.jpg"
-                  alt="Обложка книги"
-                  border-radius:
-                  10px
-                />
-                <div class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="far fa-star"></i>
-                  <!-- Пустая звезда -->
-                </div>
-                <h3>Путешествие на Запад...</h3>
-                <p class="author">У Чэнъэнь</p>
-              </div>
-              <div class="book-card">
-                <img
-                  src="/книги/Запад2.jpg"
-                  alt="Обложка книги"
-                  border-radius:
-                  10px
-                />
-                <div class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h3>Путешествие на Запад...2</h3>
-                <p class="author">У Чэнъэнь</p>
-              </div>
-              <div class="book-card">
-                <img src="/книги/Красное бедствие.jpg" alt="Обложка книги" border-radius: 10px />
-                <div class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h3>Красное бедствие</h3>
-                <p class="author">Рита Хоффман</p>
-              </div>
-              <div class="book-card">
-                <img
-                  src="/книги/Злодейский.jpg"
-                  alt="Обложка книги"
-                />
-                <div class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h3>Злодейский путь!.. Том 5</h3>
-                <p class="author">Эл Моргот</p>
-              </div>
-              <div class="book-card">
-                <img
-                  src="/книги/Король шаманов.png"
-                  alt="Обложка книги"
-                />
-                <div class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h3>Король шаманов...</h3>
-                <p class="author">Хироюки Такэи</p>
-              </div>
-              <div class="book-card">
-                <img
-                  src="/книги/Бусито.png"
-                  alt="Обложка книги"
-                />
-                <div class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h3>Бусидо</h3>
-                <p class="author">Ямамото Цунэтомо</p>
-              </div>
-
-
-
-<!-- Вот пример книг -->
-              <div class="book-card">
-                <img
-                  src="/книги/Ведьмак.jpg"
-                  alt="Обложка книги"
-                />
-                <div class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h3>Ведьмак</h3>
-                <p class="author">Анджей Сапковский</p>
-              </div>
-
-<!-- тут -->
-                 <div class="book-card">
-                <img
-                  src="/книги/Выживание в игре за варвара.jpg"
-                  alt="Обложка книги"
-                />
-                <div class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h3>Выживание в игре за варвара</h3>
-                <p class="author">Манхва</p>
-              </div>
-<!-- тут -->
-      <div class="book-card">
-                <img
-                  src="/книги/Памятник Берсерку.jpg"
-                  alt="Обложка книги"
-                />
-                <div class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h3>Памятник Берсерку</h3>
-                <p class="author">Манхва</p>
-              </div>
-
-               <div class="book-card">
-                <img
-                  src="/книги/Поднятие уровня в одиночку.jpg"
-                  alt="Обложка книги"
-                />
-                <div class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h3>Поднятие уровня...</h3>
-                <p class="author">Na Honjaman Lebel-eob</p>
-              </div>
-
-
-                 <div class="book-card">
-                <img
-                  src="/книги/Магическая битва.jpg"
-                  alt="Обложка книги"
-                />
-                <div class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h3>Магическая битва</h3>
-                <p class="author">Jujutsu Kaisen</p>
-              </div>
-
-
-                <div class="book-card">
-                <img
-                  src="/книги/Человек-бензопила 2.jpg"
-                  alt="Обложка книги"
-                />
-                <div class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h3>Человек-бензопила 2</h3>
-                <p class="author">Chainsaw Man 2</p>
-              </div>
-
-
-<!-- Вот пример книг -->
-
-
-
-
-              <!-- Добавьте больше книг по аналогии -->
+            
+            <!-- Правая колонка -->
+            <div class="right-column">
+                <h2>Категории</h2>
+                <p>7 категорий</p>
+                <ul class="category-list">
+                    <li><a href="#">Бизнес-книги</a></li>
+                    <li><a href="#">История</a></li>
+                    <li><a href="#">Приключения</a></li>
+                    <li><a href="#">Психология</a></li>
+                    <li><a href="#">Ужасы</a></li>
+                    <li><a href="#">Фантастика</a></li>
+                    <li><a href="#">Фэнтези</a></li>
+                </ul>
             </div>
-          </section>
         </div>
-
-        <!-- тут новый код! -->
-
-        <!-- Конец нового кода -->
-
-        
-
-        <!-- Правая колонка - сайдбар категорий -->
-        <div class="right-column sidebar-block">
-          <h2>Категории</h2>
-          <p class="category-count">7 категорий</p>
-          <ul class="category-list">
-            <li><a href="#">Бизнес-книги</a></li>
-            <li><a href="#">История</a></li>
-            <li><a href="#">Приключения</a></li>
-            <li><a href="#">Психология</a></li>
-            <li><a href="#">Ужасы</a></li>
-            <li><a href="#">Фантастика</a></li>
-            <li><a href="#">Фэнтези</a></li>
-          </ul>
-        </div>
-      </div>
     </main>
-  </body>
+</body>
 </html>
