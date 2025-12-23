@@ -1,5 +1,6 @@
 
-         * {
+       /* Базовые стили */
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -112,6 +113,11 @@
             margin-bottom: 20px;
         }
         
+        h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        
         .section-block {
             margin-bottom: 40px;
         }
@@ -174,7 +180,7 @@
             font-size: 12px;
         }
         
-        /* Сайдбар */
+        /* Правая колонка */
         .right-column {
             flex: 1;
             background: #2b2b2b;
@@ -185,6 +191,7 @@
         
         .category-list {
             list-style: none;
+            margin-bottom: 30px;
         }
         
         .category-list li {
@@ -198,6 +205,54 @@
         
         .category-list a:hover {
             color: #ff9900;
+        }
+        
+        /* Форма обратной связи */
+        .feedback-form {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #3a3a3a;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #a0a0a0;
+            font-size: 14px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            background: #3a3a3a;
+            border: 1px solid #4a4a4a;
+            border-radius: 5px;
+            color: #f0f0f0;
+            font-size: 14px;
+        }
+        
+        textarea.form-control {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .btn {
+            background: #4a6fa5;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        
+        .btn:hover {
+            background: #3a5a8a;
         }
         
         /* Адаптивность */
