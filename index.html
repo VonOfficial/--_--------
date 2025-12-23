@@ -141,16 +141,9 @@
             background: #2b2b2b;
             padding: 20px;
             border-radius: 10px;
-            position: relative;
         }
         
-        /* Книги с вертикальным скроллом */
-        .books-scroll-container {
-            max-height: 800px;
-            overflow-y: auto;
-            padding-right: 10px;
-        }
-        
+        /* Книги */
         .book-cards {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
@@ -185,6 +178,83 @@
         .author {
             color: #a0a0a0;
             font-size: 12px;
+        }
+        
+        /* Блок "Сейчас читают" */
+        .now-reading {
+            background: #2b2b2b;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 40px 0;
+        }
+        
+        .now-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        
+        .now-title {
+            font-size: 22px;
+        }
+        
+        .now-arrow {
+            color: #ff9900;
+            margin-left: 10px;
+        }
+        
+        .filter-btn {
+            background: #3a3a3a;
+            color: #f0f0f0;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .now-columns {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .col-heading {
+            color: #a0a0a0;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        
+        .now-list {
+            list-style: none;
+        }
+        
+        .now-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .now-thumb {
+            width: 64px;
+            height: 64px;
+            background: #3a3a3a;
+            border-radius: 5px;
+        }
+        
+        .now-info {
+            flex: 1;
+        }
+        
+        .now-item-title {
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+        
+        .now-item-meta {
+            color: #a0a0a0;
+            font-size: 13px;
         }
         
         /* Правая колонка */
@@ -225,13 +295,6 @@
             margin-bottom: 15px;
         }
         
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            color: #a0a0a0;
-            font-size: 14px;
-        }
-        
         .form-control {
             width: 100%;
             padding: 10px;
@@ -239,11 +302,9 @@
             border: 1px solid #4a4a4a;
             border-radius: 5px;
             color: #f0f0f0;
-            font-size: 14px;
         }
         
         textarea.form-control {
-            resize: vertical;
             min-height: 100px;
         }
         
@@ -251,21 +312,20 @@
             background: #4a6fa5;
             color: white;
             border: none;
-            padding: 12px 20px;
+            padding: 12px;
             border-radius: 5px;
             cursor: pointer;
             width: 100%;
-            font-size: 16px;
-        }
-        
-        .btn:hover {
-            background: #3a5a8a;
         }
         
         /* Адаптивность */
         @media (max-width: 1024px) {
             .book-cards {
                 grid-template-columns: repeat(4, 1fr);
+            }
+            
+            .now-columns {
+                grid-template-columns: repeat(2, 1fr);
             }
             
             .category-cards {
@@ -280,6 +340,10 @@
             
             .book-cards {
                 grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .now-columns {
+                grid-template-columns: 1fr;
             }
             
             .header-container {
@@ -358,155 +422,151 @@
                     </div>
                 </section>
                 
-                <!-- Книги с вертикальным скроллом -->
+                <!-- Книги - вернул 12 книг -->
                 <section class="section-block">
                     <h2>Все книги</h2>
-                    <div class="books-scroll-container">
-                        <div class="book-cards">
-                            <!-- Книги (36 штук, дублируются) -->
-                            <div class="book-card">
-                                <img>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </div>
-                                <h3>Путешествие на Запад</h3>
-                                <p class="author">У Чэнъэнь</p>
+                    <div class="book-cards">
+                        <!-- 12 карточек книг -->
+                        <div class="book-card">
+                            <img>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
                             </div>
-                            
-                            <div class="book-card">
-                                <img>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <h3>Красное бедствие</h3>
-                                <p class="author">Рита Хоффман</p>
+                            <h3>Путешествие на Запад</h3>
+                            <p class="author">У Чэнъэнь</p>
+                        </div>
+                        
+                        <div class="book-card">
+                            <img>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
-                            
-                            <div class="book-card">
-                                <img>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <h3>Злодейский путь! Том 5</h3>
-                                <p class="author">Эл Моргот</p>
+                            <h3>Красное бедствие</h3>
+                            <p class="author">Рита Хоффман</p>
+                        </div>
+                        
+                        <div class="book-card">
+                            <img>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
-                            
-                            <div class="book-card">
-                                <img>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <h3>Король шаманов</h3>
-                                <p class="author">Хироюки Такэи</p>
+                            <h3>Злодейский путь! Том 5</h3>
+                            <p class="author">Эл Моргот</p>
+                        </div>
+                        
+                        <div class="book-card">
+                            <img>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
-                            
-                            <div class="book-card">
-                                <img>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <h3>Бусидо</h3>
-                                <p class="author">Ямамото Цунэтомо</p>
+                            <h3>Король шаманов</h3>
+                            <p class="author">Хироюки Такэи</p>
+                        </div>
+                        
+                        <div class="book-card">
+                            <img>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
-                            
-                            <div class="book-card">
-                                <img>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <h3>Ведьмак</h3>
-                                <p class="author">Анджей Сапковский</p>
+                            <h3>Бусидо</h3>
+                            <p class="author">Ямамото Цунэтомо</p>
+                        </div>
+                        
+                        <div class="book-card">
+                            <img>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
-                            
-                            <!-- Еще книги (повторяются) -->
-                            <div class="book-card">
-                                <img>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <h3>Выживание в игре за варвара</h3>
-                                <p class="author">Манхва</p>
+                            <h3>Ведьмак</h3>
+                            <p class="author">Анджей Сапковский</p>
+                        </div>
+                        
+                        <div class="book-card">
+                            <img>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
-                            
-                            <div class="book-card">
-                                <img>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <h3>Памятник Берсерку</h3>
-                                <p class="author">Манхва</p>
+                            <h3>Выживание в игре за варвара</h3>
+                            <p class="author">Манхва</p>
+                        </div>
+                        
+                        <div class="book-card">
+                            <img>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
-                            
-                            <div class="book-card">
-                                <img>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <h3>Поднятие уровня в одиночку</h3>
-                                <p class="author">Na Honjaman Lebel-eob</p>
+                            <h3>Памятник Берсерку</h3>
+                            <p class="author">Манхва</p>
+                        </div>
+                        
+                        <div class="book-card">
+                            <img>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
-                            
-                            <div class="book-card">
-                                <img>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <h3>Магическая битва</h3>
-                                <p class="author">Jujutsu Kaisen</p>
+                            <h3>Поднятие уровня в одиночку</h3>
+                            <p class="author">Na Honjaman Lebel-eob</p>
+                        </div>
+                        
+                        <div class="book-card">
+                            <img>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
-                            
-                            <div class="book-card">
-                                <img>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <h3>Человек-бензопила 2</h3>
-                                <p class="author">Chainsaw Man 2</p>
+                            <h3>Магическая битва</h3>
+                            <p class="author">Jujutsu Kaisen</p>
+                        </div>
+                        
+                        <div class="book-card">
+                            <img>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
+<<<<<<< HEAD
                             
                             <div class="book-card">
                                 <img>
@@ -833,7 +893,119 @@
                                 </div>
                                 <h3>Властелин Колец</h3>
                                 <p class="author">Дж. Р. Р. Толкин</p>
+=======
+                            <h3>Человек-бензопила 2</h3>
+                            <p class="author">Chainsaw Man 2</p>
+                        </div>
+                        
+                        <div class="book-card">
+                            <img>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+>>>>>>> ecf3ac219ec99976e16d6bddff5fccda8ebeaaaf
                             </div>
+                            <h3>Властелин Колец</h3>
+                            <p class="author">Дж. Р. Р. Толкин</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Блок "Сейчас читают" -->
+                <section class="now-reading">
+                    <div class="now-header">
+                        <h2 class="now-title">Сейчас читают <span class="now-arrow">→</span></h2>
+                        <div class="now-controls">
+                            <button class="filter-btn">За день <i class="fas fa-chevron-down"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="now-columns">
+                        <!-- Колонка 1 -->
+                        <div class="now-col">
+                            <h3 class="col-heading">Новинки</h3>
+                            <ul class="now-list">
+                                <li class="now-item">
+                                    <div class="now-thumb"></div>
+                                    <div class="now-info">
+                                        <div class="now-item-title">Сэмпай Чирико переполнена</div>
+                                        <div class="now-item-meta">Манга</div>
+                                    </div>
+                                </li>
+                                <li class="now-item">
+                                    <div class="now-thumb"></div>
+                                    <div class="now-info">
+                                        <div class="now-item-title">Моя невеста такая подлая</div>
+                                        <div class="now-item-meta">Манга</div>
+                                    </div>
+                                </li>
+                                <li class="now-item">
+                                    <div class="now-thumb"></div>
+                                    <div class="now-info">
+                                        <div class="now-item-title">Я переродился братом обречённой...</div>
+                                        <div class="now-item-meta">Манга</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Колонка 2 -->
+                        <div class="now-col">
+                            <h3 class="col-heading">Набирающее популярность</h3>
+                            <ul class="now-list">
+                                <li class="now-item">
+                                    <div class="now-thumb"></div>
+                                    <div class="now-info">
+                                        <div class="now-item-title">Сборник комиксов от Bonny</div>
+                                        <div class="now-item-meta">Комикс</div>
+                                    </div>
+                                </li>
+                                <li class="now-item">
+                                    <div class="now-thumb"></div>
+                                    <div class="now-info">
+                                        <div class="now-item-title">Моя девушка-пацанка чертовски милая</div>
+                                        <div class="now-item-meta">Манга</div>
+                                    </div>
+                                </li>
+                                <li class="now-item">
+                                    <div class="now-thumb"></div>
+                                    <div class="now-info">
+                                        <div class="now-item-title">Наш урожай небывалый, повелитель!</div>
+                                        <div class="now-item-meta">Манхва</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Колонка 3 -->
+                        <div class="now-col">
+                            <h3 class="col-heading">Популярное</h3>
+                            <ul class="now-list">
+                                <li class="now-item">
+                                    <div class="now-thumb"></div>
+                                    <div class="now-info">
+                                        <div class="now-item-title">Gachiakuta. Крутые отбросы</div>
+                                        <div class="now-item-meta">Манга</div>
+                                    </div>
+                                </li>
+                                <li class="now-item">
+                                    <div class="now-thumb"></div>
+                                    <div class="now-info">
+                                        <div class="now-item-title">Дандадан</div>
+                                        <div class="now-item-meta">Манга</div>
+                                    </div>
+                                </li>
+                                <li class="now-item">
+                                    <div class="now-thumb"></div>
+                                    <div class="now-info">
+                                        <div class="now-item-title">Ван Пис</div>
+                                        <div class="now-item-meta">Манга</div>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </section>
@@ -856,20 +1028,17 @@
                 <!-- Форма обратной связи -->
                 <div class="feedback-form">
                     <h3>Обратная связь</h3>
-                    <form id="feedbackForm">
+                    <form>
                         <div class="form-group">
-                            <label for="name">Имя:</label>
-                            <input type="text" id="name" class="form-control" required>
+                            <input type="text" placeholder="Имя" class="form-control" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" class="form-control" required>
+                            <input type="email" placeholder="Email" class="form-control" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="message">Сообщение:</label>
-                            <textarea id="message" class="form-control" required></textarea>
+                            <textarea placeholder="Сообщение" class="form-control" required></textarea>
                         </div>
                         
                         <button type="submit" class="btn">Отправить</button>
