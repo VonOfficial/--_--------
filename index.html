@@ -1,567 +1,356 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Букбук</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Шапка -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
     <header class="navbar">
-      <div class="container header-container">
-        <div class="logo">
-          <div class="logo-icon"></div>
-          <div>Букбук</div>
-        </div>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="" alt="Логотип Букбук" class="logo-img">
+                <div>Букбук</div>
+            </div>
 
-        <div class="search-box">
-          <i class="fas fa-search"></i>
-          <input type="text" placeholder="Книга или автор" />
-        </div>
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Книга или автор">
+            </div>
 
-        <div class="theme-toggle">
-          <i class="fas fa-moon"></i>
-        </div>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
 
-        <div class="auth-links">
-          <a href="#" class="link-sub">Подписка</a>
-          <a href="#" class="link-login">Войти</a>
+            <div class="auth-links">
+                <a href="#" class="link-sub">Подписка</a>
+                <a href="#" class="link-login">Войти</a>
+            </div>
         </div>
-      </div>
     </header>
 
-    <!-- Основной контент -->
     <main class="container">
-      <div class="main-layout">
-        <!-- Левая колонка -->
-        <div class="left-column">
-          <div class="breadcrumbs">Главная → Библиотека</div>
+        <div class="main-layout">
+            <div class="left-column">
+                <div class="breadcrumbs">Главная → Библиотека</div>
+                <h1>Библиотека</h1>
 
-          <h1>Библиотека</h1>
+                <section class="section-block">
+                    <h2>Популярные категории</h2>
+                    <div class="category-cards">
+                        <div class="category-card">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3839/3839827.png" alt="Фэнтези" class="category-img">
+                            <h3>Фэнтези</h3>
+                            <p>85 760 читателей</p>
+                        </div>
+                        <div class="category-card">
+                            <img src="" alt="Фантастика" class="category-img">
+                            <h3>Фантастика</h3>
+                            <p>63 241 читателей</p>
+                        </div>
+                        <div class="category-card">
+                            <img src="" alt="Психология" class="category-img">
+                            <h3>Психология</h3>
+                            <p>70 532 читателей</p>
+                        </div>
+                    </div>
+                </section>
 
-          <!-- Категории -->
-          <section class="section-block">
-            <h2>Популярные категории</h2>
-            <div class="category-cards">
-              <div class="category-card">
-                <h3>Фэнтези</h3>
-                <p>85 760 читателей</p>
-              </div>
-              <div class="category-card">
-                <h3>Фантастика</h3>
-                <p>63 241 читателей</p>
-              </div>
-              <div class="category-card">
-                <h3>Психология</h3>
-                <p>70 532 читателей</p>
-              </div>
+                <section class="now-reading">
+                    <div class="now-header">
+                        <h2 class="now-title">Сейчас читают <span class="now-arrow">→</span></h2>
+                        <div class="now-controls">
+                            <button class="filter-btn">За день <i class="fas fa-chevron-down"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="now-columns">
+                        <div class="now-col">
+                            <h3 class="col-heading">Новинки</h3>
+                            <ul class="now-list">
+                                <li class="now-item">
+                                    <img src="" alt="Сэмпай Чирико переполнена" class="now-thumb">
+                                    <div class="now-info">
+                                        <div class="now-item-title">Сэмпай Чирико переполнена</div>
+                                        <div class="now-item-meta">Манга</div>
+                                    </div>
+                                </li>
+                                <li class="now-item">
+                                    <img src="" alt="Моя невеста такая подлая" class="now-thumb">
+                                    <div class="now-info">
+                                        <div class="now-item-title">Моя невеста такая подлая</div>
+                                        <div class="now-item-meta">Манга</div>
+                                    </div>
+                                </li>
+                                <li class="now-item">
+                                    <img src="" alt="Я переродился братом обречённой" class="now-thumb">
+                                    <div class="now-info">
+                                        <div class="now-item-title">Я переродился братом обречённой...</div>
+                                        <div class="now-item-meta">Манга</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="now-col">
+                            <h3 class="col-heading">Набирающее популярность</h3>
+                            <ul class="now-list">
+                                <li class="now-item">
+                                    <img src="" alt="Сборник комиксов от Bonny" class="now-thumb">
+                                    <div class="now-info">
+                                        <div class="now-item-title">Сборник комиксов от Bonny</div>
+                                        <div class="now-item-meta">Комикс</div>
+                                    </div>
+                                </li>
+                                <li class="now-item">
+                                    <img src="" alt="Моя девушка-пацанка чертовски милая" class="now-thumb">
+                                    <div class="now-info">
+                                        <div class="now-item-title">Моя девушка-пацанка чертовски милая</div>
+                                        <div class="now-item-meta">Манга</div>
+                                    </div>
+                                </li>
+                                <li class="now-item">
+                                    <img src="" alt="Наш урожай небывалый, повелитель!" class="now-thumb">
+                                    <div class="now-info">
+                                        <div class="now-item-title">Наш урожай небывалый, повелитель!</div>
+                                        <div class="now-item-meta">Манхва</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="now-col">
+                            <h3 class="col-heading">Популярное</h3>
+                            <ul class="now-list">
+                                <li class="now-item">
+                                    <img src="" alt="Gachiakuta. Крутые отбросы" class="now-thumb">
+                                    <div class="now-info">
+                                        <div class="now-item-title">Gachiakuta. Крутые отбросы</div>
+                                        <div class="now-item-meta">Манга</div>
+                                    </div>
+                                </li>
+                                <li class="now-item">
+                                    <img src="" alt="Дандадан" class="now-thumb">
+                                    <div class="now-info">
+                                        <div class="now-item-title">Дандадан</div>
+                                        <div class="now-item-meta">Манга</div>
+                                    </div>
+                                </li>
+                                <li class="now-item">
+                                    <img src="" alt="Ван Пис" class="now-thumb">
+                                    <div class="now-info">
+                                        <div class="now-item-title">Ван Пис</div>
+                                        <div class="now-item-meta">Манга</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section-block">
+                    <h2>Все книги</h2>
+                    <div class="book-cards">
+                        <div class="book-card">
+                            <img class="book-cover" src="/книги/Запад.jpg" alt="Путешествие на Запад">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            </div>
+                            <h3>Путешествие на Запад</h3>
+                            <p class="author">У Чэнъэнь</p>
+                        </div>
+                        
+                        <div class="book-card">
+                            <img class="book-cover" src="/книги/Запад2.jpg" alt="Путешествие на Запад 2">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <h3>Путешествие на Запад 2</h3>
+                            <p class="author">У Чэнъэнь</p>
+                        </div>
+                        
+                        <div class="book-card">
+                            <img class="book-cover" src="/книги/Злодейский.jpg" alt="Злодейский путь! Том 5">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <h3>Злодейский путь! Том 5</h3>
+                            <p class="author">Эл Моргот</p>
+                        </div>
+                        
+                        <div class="book-card">
+                            <img class="book-cover" src="/книги/Король шаманов.png" alt="Король шаманов">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <h3>Король шаманов</h3>
+                            <p class="author">Хироюки Такэи</p>
+                        </div>
+                        
+                        <div class="book-card">
+                            <img class="book-cover" src="https://www.moscowbooks.ru/image/book/808/orig/i808912.jpg?cu=20240405183505" alt="Бусидо">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <h3>Бусидо</h3>
+                            <p class="author">Ямамото Цунэтомо</p>
+                        </div>
+                        
+                        <div class="book-card">
+                            <img class="book-cover" src="/книги/Ведьмак.jpg" alt="Ведьмак">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <h3>Ведьмак</h3>
+                            <p class="author">Анджей Сапковский</p>
+                        </div>
+                        
+                        <div class="book-card">
+                            <img class="book-cover" src="/книги/Выживание в игре за варвара.jpg" alt="Выживание в игре за варвара">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <h3>Выживание в игре за варвара</h3>
+                            <p class="author">Манхва</p>
+                        </div>
+                        
+                        <div class="book-card">
+                            <img class="book-cover" src="/книги/Памятник Берсерку.jpg" alt="Памятник Берсерку">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <h3>Памятник Берсерку</h3>
+                            <p class="author">Манхва</p>
+                        </div>
+                        
+                        <div class="book-card">
+                            <img class="book-cover" src="/книги/Поднятие уровня в одиночку.jpg" alt="Поднятие уровня в одиночку">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <h3>Поднятие уровня в одиночку</h3>
+                            <p class="author">Na Honjaman Lebel-eob</p>
+                        </div>
+                        
+                        <div class="book-card">
+                            <img class="book-cover" src="/книги/Магическая битва.jpg" alt="Магическая битва">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <h3>Магическая битва</h3>
+                            <p class="author">Jujutsu Kaisen</p>
+                        </div>
+                        
+                        <div class="book-card">
+                            <img class="book-cover" src="/книги/Человек-бензопила 2.jpg" alt="Человек-бензопила 2">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <h3>Человек-бензопила 2</h3>
+                            <p class="author">Chainsaw Man 2</p>
+                        </div>
+                        
+                        <div class="book-card">
+                            <img class="book-cover" src="/книги/Ван Пис.jpg" alt="Ван Пис — Цветное Издание">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <h3>Ван Пис — Цветное Издание</h3>
+                            <p class="author">One Piece — Digital Colored Comics</p>
+                        </div>
+                        
+                        <div class="book-card">
+                            <img class="book-cover" src="/книги/Перерождение Тан Иня в другом.jpg" alt="Перерождение Тан Иня в другом">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <h3>Перерождение Тан Иня в другом...</h3>
+                            <p class="author">Tang Yin Zai Yi Jie</p>
+                        </div>
+                        
+                        <div class="book-card">
+                            <img class="book-cover" src="/книги/Возрождение городского.jpg" alt="Возрождение городского">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <h3>Возрождение городского...</h3>
+                            <p class="author">Маньхуа</p>
+                        </div>
+                        
+                        <div class="book-card">
+                            <img class="book-cover" src="/книги/Клинок, рассекающий демонов.jpg" alt="Клинок, рассекающий демонов">
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <h3>Клинок, рассекающий демонов</h3>
+                            <p class="author">Kimetsu no Yaiba</p>
+                        </div>
+                    </div>
+
+                    <section class="new-releases-section">
+                        <h2 class="section-header">Новинки <i class="fas fa-arrow-right"></i></h2>
+                        <div class="horizontal-scroll-container">
+                            <button class="scroll-button left-arrow" aria-label="Предыдущая"><i class="fas fa-chevron-left"></i></button>
+                            <button class="scroll-button right-arrow" aria-label="Следующая"><i class="fas fa-chevron-right"></i></button>
+                            <div class="new-releases-wrapper">
+                                <div class="release-card">
+                                    <img src="data:image/jpeg;base64,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" alt="Виновным" class="release-cover">
+                                    <div class="release-title">Виновным</div>
+                                    <div class="release-meta">Корея</div>
+                                </div>
+                                <div class="release-card">
+                                    <img src="" alt="Города до сих пор горят" class="release-cover">
+                                    <div class="release-title">Города до сих пор горят</div>
+                                    <div class="release-meta">Английский</div>
+                                </div>
+                                <div class="release-card">
+                                    <img src="" alt="Стал злодеем" class="release-cover">
+                                    <div class="release-title">Стал злодеем, которым...</div>
+                                    <div class="release-meta">Корея</div>
+                                </div>
+                                <div class="release-card">
+                                    <img src="" alt="Пепел Возмездия" class="release-cover">
+                                    <div class="release-title">Пепел Возмездия</div>
+                                    <div class="release-meta">Авторский</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
             </div>
-          </section>
 
-          <!-- Блок "Сейчас читают" с обычным фоном -->
-          <section class="now-reading">
-            <div class="now-header">
-              <h2 class="now-title">
-                Сейчас читают <span class="now-arrow">→</span>
-              </h2>
-              <div class="now-controls">
-                <button class="filter-btn">
-                  За день <i class="fas fa-chevron-down"></i>
-                </button>
-              </div>
-            </div>
-
-            <div class="now-columns">
-              <!-- Колонка 1 -->
-              <div class="now-col">
-                <h3 class="col-heading">Новинки</h3>
-                <ul class="now-list">
-                  <li class="now-item">
-                    <div class="now-thumb"></div>
-
-                    <div class="now-info">
-                      <div class="now-item-title">
-                        Сэмпай Чирико переполнена
-                      </div>
-                      <div class="now-item-meta">Манга</div>
-                    </div>
-                  </li>
-                  <li class="now-item">
-                    <div class="now-thumb"></div>
-                    <div class="now-info">
-                      <div class="now-item-title">Моя невеста такая подлая</div>
-                      <div class="now-item-meta">Манга</div>
-                    </div>
-                  </li>
-                  <li class="now-item">
-                    <div class="now-thumb"></div>
-                    <div class="now-info">
-                      <div class="now-item-title">
-                        Я переродился братом обречённой...
-                      </div>
-                      <div class="now-item-meta">Манга</div>
-                    </div>
-                  </li>
+            <div class="right-column">
+                <h2>Категории</h2>
+                <p>7 категорий</p>
+                <ul class="category-list">
+                    <li><a href="#">Бизнес-книги</a></li>
+                    <li><a href="#">История</a></li>
+                    <li><a href="#">Приключения</a></li>
+                    <li><a href="#">Психология</a></li>
+                    <li><a href="#">Ужасы</a></li>
+                    <li><a href="#">Фантастика</a></li>
+                    <li><a href="#">Фэнтези</a></li>
                 </ul>
-              </div>
 
-              <!-- Колонка 2 -->
-              <div class="now-col">
-                <h3 class="col-heading">Набирающее популярность</h3>
-                <ul class="now-list">
-                  <li class="now-item">
-                    <div class="now-thumb"></div>
-                    <div class="now-info">
-                      <div class="now-item-title">
-                        Сборник комиксов от Bonny
-                      </div>
-                      <div class="now-item-meta">Комикс</div>
-                    </div>
-                  </li>
-                  <li class="now-item">
-                    <div class="now-thumb"></div>
-                    <div class="now-info">
-                      <div class="now-item-title">
-                        Моя девушка-пацанка чертовски милая
-                      </div>
-                      <div class="now-item-meta">Манга</div>
-                    </div>
-                  </li>
-                  <li class="now-item">
-                    <div class="now-thumb"></div>
-                    <div class="now-info">
-                      <div class="now-item-title">
-                        Наш урожай небывалый, повелитель!
-                      </div>
-                      <div class="now-item-meta">Манхва</div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Колонка 3 -->
-              <div class="now-col">
-                <h3 class="col-heading">Популярное</h3>
-                <ul class="now-list">
-                  <li class="now-item">
-                    <div class="now-thumb"></div>
-                    <div class="now-info">
-                      <div class="now-item-title">
-                        Gachiakuta. Крутые отбросы
-                      </div>
-                      <div class="now-item-meta">Манга</div>
-                    </div>
-                  </li>
-                  <li class="now-item">
-                    <div class="now-thumb"></div>
-                    <div class="now-info">
-                      <div class="now-item-title">Дандадан</div>
-                      <div class="now-item-meta">Манга</div>
-                    </div>
-                  </li>
-                  <li class="now-item">
-                    <div class="now-thumb"></div>
-                    <div class="now-info">
-                      <div class="now-item-title">Ван Пис</div>
-                      <div class="now-item-meta">Манга</div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+                <div class="feedback-form">
+                    <h3>Обратная связь</h3>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Имя" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Сообщение" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Отправить</button>
+                    </form>
+                </div>
             </div>
-          </section>
-
-          <!-- Все книги -->
-          <section class="section-block">
-            <h2>Все книги</h2>
-            <div class="book-cards">
-              <!-- 12 карточек книг -->
-              <div class="book-card">
-                <img class="book-cover" src="/книги/Запад.jpg" alt="book" />
-                <div class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="far fa-star"></i>
-                </div>
-                <h3>Путешествие на Запад</h3>
-                <p class="author">У Чэнъэнь</p>
-              </div>
-
-              <div class="book-card">
-                <img class="book-cover" src="/книги/Запад2.jpg" alt="book" />
-                <div class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h3>Путешествие на Запад 2</h3>
-                <p class="author">У Чэнъэнь</p>
-              </div>
-
-              <div class="book-card">
-                <img
-                  class="book-cover"
-                  src="/книги/Злодейский.jpg"
-                  alt="book"
-                />
-                <div class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h3>Злодейский путь! Том 5</h3>
-                <p class="author">Эл Моргот</p>
-              </div>
-
-              <div class="book-card">
-                <img
-                  class="book-cover"
-                  src="/книги/Король шаманов.png"
-                  alt="book"
-                />
-                <div class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h3>Король шаманов</h3>
-                <p class="author">Хироюки Такэи</p>
-              </div>
-
-              <div class="book-card">
-                <img class="book-cover" src="/книги/Бусито.png" alt="book" />
-                <div class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h3>Бусидо</h3>
-                <p class="author">Ямамото Цунэтомо</p>
-              </div>
-
-              <div class="book-card">
-                <img class="book-cover" src="/книги/Ведьмак.jpg" alt="book" />
-                <div class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h3>Ведьмак</h3>
-                <p class="author">Анджей Сапковский</p>
-              </div>
-
-              <div class="book-card">
-                <img
-                  class="book-cover"
-                  src="/книги/Выживание в игре за варвара.jpg"
-                  alt="book"
-                />
-                <div class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h3>Выживание в игре за варвара</h3>
-                <p class="author">Манхва</p>
-              </div>
-
-              <div class="book-card">
-                <img
-                  class="book-cover"
-                  src="/книги/Памятник Берсерку.jpg"
-                  alt="book"
-                />
-                <div class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h3>Памятник Берсерку</h3>
-                <p class="author">Манхва</p>
-              </div>
-
-              <div class="book-card">
-                <img
-                  class="book-cover"
-                  src="/книги/Поднятие уровня в одиночку.jpg"
-                  alt="book"
-                />
-                <div class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h3>Поднятие уровня в одиночку</h3>
-                <p class="author">Na Honjaman Lebel-eob</p>
-              </div>
-
-              <div class="book-card">
-                <img
-                  class="book-cover"
-                  src="/книги/Магическая битва.jpg"
-                  alt="book"
-                />
-                <div class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h3>Магическая битва</h3>
-                <p class="author">Jujutsu Kaisen</p>
-              </div>
-
-              <div class="book-card">
-                <img
-                  class="book-cover"
-                  src="/книги/Человек-бензопила 2.jpg"
-                  alt="book"
-                />
-                <div class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h3>Человек-бензопила 2</h3>
-                <p class="author">Chainsaw Man 2</p>
-              </div>
-
-              <div class="book-card">
-                <img class="book-cover" src="/книги/Ван Пис.jpg" alt="book" />
-                <div class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h3>Ван Пис — Цветное Издание</h3>
-                <p class="author">One Piece — Digital Colored Comics</p>
-              </div>
-
-              <div class="book-card">
-                <img
-                  class="book-cover"
-                  src="/книги/Перерождение Тан Иня в другом.jpg"
-                  alt="book"
-                />
-                <div class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h3>Перерождение Тан Иня в другом...</h3>
-                <p class="author">Tang Yin Zai Yi Jie</p>
-              </div>
-
-              <div class="book-card">
-                <img
-                  class="book-cover"
-                  src="/книги/Возрождение городского.jpg"
-                  alt="book"
-                />
-                <div class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h3>Возрождение городского...</h3>
-                <p class="author">Маньхуа</p>
-              </div>
-
-              <div class="book-card">
-                <img
-                  class="book-cover"
-                  src="/книги/Клинок, рассекающий демонов.jpg"
-                  alt="book"
-                />
-                <div class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h3>Клинок, рассекающий демонов</h3>
-                <p class="author">Kimetsu no Yaiba</p>
-              </div>
-            </div>
-            <!-- НОВЫЙ РАЗДЕЛ: Новинки (горизонтальный скролл) -->
-            <section class="new-releases-section">
-              <h2 class="section-header">
-                Новинки
-                <i
-                  class="fas fa-arrow-right"
-                  style="font-size: 16px; opacity: 0.5"
-                ></i>
-              </h2>
-
-              <div class="horizontal-scroll-container">
-                <!-- Кнопки навигации (не обязательны, но есть на макете) -->
-                <button
-                  class="scroll-button left-arrow"
-                  aria-label="Предыдущая"
-                >
-                  <i class="fas fa-chevron-left"></i>
-                </button>
-                <button
-                  class="scroll-button right-arrow"
-                  aria-label="Следующая"
-                >
-                  <i class="fas fa-chevron-right"></i>
-                </button>
-
-                <div class="new-releases-wrapper">
-                  <!-- Пример одной новой книги -->
-                  <div class="release-card">
-                    <img
-                      class="release-cover"
-                      src="/книги/Эхо миров.jpg"
-                      alt="Обложка книги"
-                    />
-                    <div class="release-title">Виновным</div>
-                    <div class="release-meta">Корея</div>
-                  </div>
-                  <div class="release-card">
-                    <img
-                      class="release-cover"
-                      src="https://via.placeholder.com/180x250/2b2b2b/d1d1d1?text=Города+горят"
-                      alt="Обложка книги"
-                    />
-                    <div class="release-title">Города до сих пор горят</div>
-                    <div class="release-meta">Английский</div>
-                  </div>
-                  <div class="release-card">
-                    <img
-                      class="release-cover"
-                      src="https://via.placeholder.com/180x250/2b2b2b/d1d1d1?text=Стал+злодеем"
-                      alt="Обложка книги"
-                    />
-                    <div class="release-title">Стал злодеем, которым...</div>
-                    <div class="release-meta">Корея</div>
-                  </div>
-                  <div class="release-card">
-                    <img
-                      class="release-cover"
-                      src="https://via.placeholder.com/180x250/2b2b2b/d1d1d1?text=Пепел+Возмездия"
-                      alt="Обложка книги"
-                    />
-                    <div class="release-title">Пепел Возмездия</div>
-                    <div class="release-meta">Авторский</div>
-                  </div>
-                  <!-- Добавьте больше карточек для проверки прокрутки -->
-                  <div class="release-card">
-                    <img
-                      class="release-cover"
-                      src="https://via.placeholder.com/180x250/2b2b2b/d1d1d1?text=Тайны+старой+библ"
-                      alt="Обложка книги"
-                    />
-                    <div class="release-title">Тайны старой библиотеки</div>
-                    <div class="release-meta">Франция</div>
-                  </div>
-                  <div class="release-card">
-                    <img
-                      class="release-cover"
-                      src="https://via.placeholder.com/180x250/2b2b2b/d1d1d1?text=Меч+и+Магия"
-                      alt="Обложка книги"
-                    />
-                    <div class="release-title">Меч и Магия</div>
-                    <div class="release-meta">Япония</div>
-                  </div>
-                  <div class="release-card">
-                    <img
-                      class="release-cover"
-                      src="https://via.placeholder.com/180x250/2b2b2b/d1d1d1?text=Последний+Дракон"
-                      alt="Обложка книги"
-                    />
-                    <div class="release-title">Последний Дракон</div>
-                    <div class="release-meta">Китай</div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </section>
         </div>
-
-        <!-- Правая колонка -->
-        <div class="right-column">
-          <h2>Категории</h2>
-          <p>7 категорий</p>
-          <ul class="category-list">
-            <li><a href="#">Бизнес-книги</a></li>
-            <li><a href="#">История</a></li>
-            <li><a href="#">Приключения</a></li>
-            <li><a href="#">Психология</a></li>
-            <li><a href="#">Ужасы</a></li>
-            <li><a href="#">Фантастика</a></li>
-            <li><a href="#">Фэнтези</a></li>
-          </ul>
-
-          <!-- Форма обратной связи -->
-          <div class="feedback-form">
-            <h3>Обратная связь</h3>
-            <form>
-              <div class="form-group">
-                <input
-                  type="text"
-                  placeholder="Имя"
-                  class="form-control"
-                  required
-                />
-              </div>
-
-              <div class="form-group">
-                <input
-                  type="email"
-                  placeholder="Email"
-                  class="form-control"
-                  required
-                />
-              </div>
-
-              <div class="form-group">
-                <textarea
-                  placeholder="Сообщение"
-                  class="form-control"
-                  required
-                ></textarea>
-              </div>
-
-              <button type="submit" class="btn">Отправить</button>
-            </form>
-          </div>
-        </div>
-      </div>
     </main>
-  </body>
+</body>
 </html>
