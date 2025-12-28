@@ -357,5 +357,36 @@
             </div>
         </div>
     </main>
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const themeToggle = document.querySelector('.theme-toggle i');
+    const body = document.body;
+    
+    // Проверяем сохраненную тему в localStorage
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+      body.classList.add('light-theme');
+      themeToggle.classList.remove('fa-moon');
+      themeToggle.classList.add('fa-sun');
+    }
+    
+    // Обработчик клика на переключатель темы
+    document.querySelector('.theme-toggle').addEventListener('click', function() {
+      if (body.classList.contains('light-theme')) {
+        // Переключаем на темную тему
+        body.classList.remove('light-theme');
+        themeToggle.classList.remove('fa-sun');
+        themeToggle.classList.add('fa-moon');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        // Переключаем на светлую тему
+        body.classList.add('light-theme');
+        themeToggle.classList.remove('fa-moon');
+        themeToggle.classList.add('fa-sun');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  });
+</script>
 </body>
 </html>

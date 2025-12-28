@@ -498,3 +498,105 @@ textarea.form-control {
     grid-template-columns: 1fr;
   }
 }
+
+/* Светлая тема */
+body.light-theme {
+  background: #f5f5f5;
+  color: #333;
+}
+
+body.light-theme .navbar {
+  background: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+body.light-theme .search-box {
+  background: #f0f0f0;
+}
+
+body.light-theme .search-box input {
+  color: #333;
+}
+
+body.light-theme .search-box i {
+  color: #666;
+}
+
+body.light-theme .auth-links a {
+  color: #666;
+}
+
+body.light-theme .link-login {
+  color: #ff9900;
+}
+
+body.light-theme .breadcrumbs {
+  color: #666;
+}
+
+body.light-theme .category-card,
+body.light-theme .now-reading,
+body.light-theme .book-card,
+body.light-theme .right-column,
+body.light-theme .new-releases-section,
+body.light-theme .release-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+}
+
+body.light-theme .now-item-meta,
+body.light-theme .author,
+body.light-theme .release-meta {
+  color: #666;
+}
+
+body.light-theme .col-heading {
+  color: #666;
+}
+
+body.light-theme .category-list a {
+  color: #666;
+}
+
+body.light-theme .category-list a:hover {
+  color: #ff9900;
+}
+
+body.light-theme .form-control {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+body.light-theme .btn {
+  background: #4a6fa5;
+}
+
+body.light-theme .filter-btn {
+  background: #f0f0f0;
+  color: #333;
+}
+
+body.light-theme .now-item-title,
+body.light-theme .release-title {
+  color: #333;
+}
+
+/* Иконка переключателя темы */
+.theme-toggle {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+.theme-toggle i {
+  font-size: 20px;
+  color: #ff9900;
+}
+
+body.light-theme .theme-toggle i {
+  color: #ff9900;
+}
