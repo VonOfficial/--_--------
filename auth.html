@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Авторизация — Букбук</title>
+    <link rel="stylesheet" href="style.css"> <!-- Подключаем те же стили -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+</head>
+<body class="auth-body">
+
+    <div class="auth-card">
+        <!-- Кнопка закрытия (ведет назад на главную) -->
+        <a href="index.html" class="close-btn">&times;</a>
+
+        <!-- ФОРМА ВХОДА -->
+        <div id="login-form" class="auth-form hidden">
+            <h1>Вход</h1>
+            <div class="input-group">
+                <label>Почта или телефон :</label>
+                <input type="text" id="login-email"> <!-- Добавили ID -->
+            </div>
+            <div class="input-group">
+                <label>Пароль :</label>
+                <input type="password" id="login-pass"> <!-- Добавили ID -->
+            </div>
+            <div class="form-footer">
+                <a href="#" class="forgot-link">Забыл пароль</a>
+                <button class="yellow-btn">Войти</button>
+            </div>
+            
+            <div class="social-btns">
+                <button class="social-btn apple"><i class="fab fa-apple"></i> Продолжить с Apple</button>
+                <button class="social-btn google"><i class="fab fa-google"></i> Продолжить с Google</button>
+            </div>
+
+            <p class="switch-text">Нет аккаунта? <span onclick="toggleForm()">Зарегистрироваться</span></p>
+        </div>
+
+        <!-- ФОРМА РЕГИСТРАЦИИ -->
+        <div id="register-form" class="auth-form">
+            <h1>Регистрация</h1>
+            <div class="input-group">
+                <label>Ваша электронная почта :</label>
+                <input type="email" id="reg-email"> <!-- Добавили ID -->
+            </div>
+            <div class="input-group">
+                <label>Придумайте пароль, пожалуйста :</label>
+                <input type="password" id="reg-pass"> <!-- Добавили ID -->
+                <small>Не менее 8 символов, цифры и буквы.</small>
+            </div>
+            <div class="form-footer">
+                <button class="yellow-btn wide">Зарегистрироваться</button>
+            </div>
+
+            <div class="social-btns">
+                <button class="social-btn apple"><i class="fab fa-apple"></i> Продолжить с Apple</button>
+                <button class="social-btn google"><i class="fab fa-google"></i> Продолжить с Google</button>
+            </div>
+
+            <p class="switch-text">Уже есть аккаунт? <span onclick="toggleForm()">Войти</span></p>
+            
+            <p class="oferta">Регистрируясь, вы принимаете <a href="#">публичную оферту</a> и <a href="#">условия использования</a> Букбук</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleForm() {
+            document.getElementById('login-form').classList.toggle('hidden');
+            document.getElementById('register-form').classList.toggle('hidden');
+        }
+    </script>
+
+    <script>// --- РЕГИСТРАЦИЯ ---
+function handleRegister() {
+    const email = document.getElementById('reg-email').value;
+    const pass = document.getElementById('reg-pass').value;
+
+    if (email === "" || pass === "") {
+        alert("Заполните все поля!");
+        return;
+    }
+
+    // Сохраняем пользователя в локальное хранилище
+    const userData = { email: email, password: pass };
+    localStorage.setItem(email, JSON.stringify(userData));
+
+    alert("Регистрация успешна! Теперь войдите.");
+    toggleForm(); // Переключаем на форму входа
+}
+
+// --- ВХОД ---
+function handleLogin() {
+    const email = document.getElementById('login-email').value;
+    const pass = document.getElementById('login-pass').value;
+
+    // Ищем пользователя в памяти браузера
+    const savedUser = localStorage.getItem(email);
+
+    if (savedUser) {
+        const user = JSON.parse(savedUser); // Превращаем строку обратно в объект
+
+        if (user.password === pass) {
+            alert("Вы успешно вошли!");
+            localStorage.setItem('currentUser', email); // Запоминаем, кто вошел
+            window.location.href = "index.html"; // Перекидываем на главную
+        } else {
+            alert("Неверный пароль!");
+        }
+    } else {
+        alert("Пользователь не найден!");
+    }
+}</script>
+
+</body>
+</html>

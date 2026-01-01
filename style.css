@@ -600,3 +600,247 @@ body.light-theme .release-title {
 body.light-theme .theme-toggle i {
   color: #ff9900;
 }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.filter-btn {
+    background: #2d2d2d; /* Цвет как на скрине */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Замени свой .dropdown-content на этот */
+.dropdown-content {
+    display: block; /* Меняем на block */
+    visibility: hidden; /* Но прячем через видимость */
+    opacity: 0; /* Делаем прозрачным */
+    transform: translateY(-10px); /* Смещаем чуть выше */
+    position: absolute;
+    background-color: #2d2d2d;
+    min-width: 100%;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    z-index: 1;
+    margin-top: 5px;
+    overflow: hidden;
+    transition: all 0.3s ease; /* Плавный переход для всех свойств */
+}
+
+/* А это класс для показа */
+.dropdown-content.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0); /* Возвращаем на место */
+}
+
+.dropdown-content div {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    transition: background 0.3s;
+    transition: background 0.2s ease, padding-left 0.2s ease;
+}
+
+.dropdown-content div:hover {
+    background-color: #444;
+    padding-left: 20px; /* Пункт будет чуть-чуть сдвигаться вправо при наведении */
+    /* color: #008418; Можно даже цвет текста менять, если хочешь */
+}
+
+/* Класс для показа списка */
+.show {
+    display: block;
+}
+
+    /* Когда у кнопки есть класс active, иконка внутри нее переворачивается */
+    .filter-btn.active i {
+        transform: rotate(180deg);
+        transition: transform 0.3s ease; /* Плавный поворот */
+    }
+
+    /* Обычное состояние иконки */
+    .filter-btn i {
+        transition: transform 0.3s ease;
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Фоновое состояние страницы */
+.auth-body {
+    background-color: #0f0f11; /* Очень темный */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* Карточка */
+.auth-card {
+    background-color: #18181b; /* Цвет карточки */
+    width: 400px;
+    padding: 40px;
+    border-radius: 24px;
+    position: relative;
+    color: white;
+}
+
+/* Заголовки */
+.auth-card h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* Поля ввода */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    background: white;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.input-group small {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #888;
+}
+
+/* Желтая кнопка */
+.yellow-btn {
+    background-color: #f3c653;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.yellow-btn.wide {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Футер формы (кнопка в ряд с ссылкой) */
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.forgot-link {
+    color: #888;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Социальные кнопки */
+.social-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.social-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    background: white;
+    color: black;
+}
+
+/* Текст переключения */
+.switch-text {
+    text-align: center;
+    margin-top: 25px;
+    color: white;
+}
+
+.switch-text span {
+    color: #aaa;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Кнопка закрыть */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 30px;
+    color: #555;
+    text-decoration: none;
+}
+
+/* Скрытие форм */
+.hidden {
+    display: none;
+}
+
+/* Оферта */
+.oferta {
+    font-size: 12px;
+    color: #777;
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1.4;
+}
+
+.oferta a {
+    color: #947a45;
+    text-decoration: none;
+}
+
+

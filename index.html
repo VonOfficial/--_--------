@@ -27,7 +27,7 @@
 
             <div class="auth-links">
                 <a href="#" class="link-sub">Подписка</a>
-                <a href="#" class="link-login">Войти</a>
+                <a href="auth.html" class="link-login">Войти</a>
             </div>
         </div>
     </header>
@@ -62,9 +62,19 @@
                 <section class="now-reading">
                     <div class="now-header">
                         <h2 class="now-title">Сейчас читают <span class="now-arrow">→</span></h2>
-                        <div class="now-controls">
-                            <button class="filter-btn">За день <i class="fas fa-chevron-down"></i></button>
-                        </div>
+                        <div class="dropdown">
+    <button class="filter-btn" id="dropdownBtn">
+        <span id="selected-value">За день</span> 
+        <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="dropdown-content" id="dropdownMenu">
+        <div data-value="day">За день</div>
+        <div data-value="week">За неделю</div>
+        <div data-value="month">За месяц</div>
+    </div>
+</div>
+
+
                     </div>
 
                     <div class="now-columns">
@@ -385,6 +395,43 @@
       }
     });
   });
+</script>
+<script src="Script.js"></script>
+
+
+
+
+<script>
+  const user = localStorage.getItem('currentUser');
+    const loginBtn = document.querySelector('.login-link'); // Ищем вашу кнопку "Войти"
+
+    if (user && loginBtn) {
+        // Если пользователь в системе:
+        loginBtn.innerText = user; // Заменяем "Войти" на email пользователя
+        loginBtn.href = "#"; // Отключаем переход на страницу входа
+        
+        // Сделаем так, чтобы имя было чуть красивее (опционально)
+        loginBtn.style.color = "#f3c653"; 
+
+        // Добавляем кнопку "Выйти"
+        const logoutBtn = document.createElement('span');
+        logoutBtn.innerText = " [Выйти]";
+        logoutBtn.style.cursor = "pointer";
+        logoutBtn.style.fontSize = "12px";
+        logoutBtn.style.marginLeft = "10px";
+        logoutBtn.style.color = "#888";
+
+        logoutBtn.onclick = function() {
+            localStorage.removeItem('currentUser');
+            location.reload(); // Перезагружаем, чтобы вернуть кнопку "Войти"
+        };
+        
+        loginBtn.appendChild(logoutBtn);
+    }
+
+
+// Запускаем проверку сразу при загрузке страницы
+document.addEventListener('DOMContentLoaded', checkAuth);
 </script>
 </body>
 </html>
